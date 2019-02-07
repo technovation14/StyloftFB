@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Technovation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="css/facebook.css" rel="stylesheet">
+<style>
+@media screen and (max-width: 768px){
+#sidebar, #sidebar a, #sidebar-footer a {
+   display:none!important;
+}
+#main{
+width:100%!important;
+}
+}
+</style>
+</head>
+
+<body>
+
+  <div class="wrapper" style="font-size:smaller!important">
+    <div class="box">
+      <!-- top nav -->
+      <div class="navbar navbar-blue navbar-static-top text-center" style="width:100%!important" >
+        <div class="navbar-header text-center">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand logo visible-xs">t</a>
+          <a href="#" class="navbar-brand logo hidden-xs" style="margin-left:17rem">t</a>
+        </div>
+        <nav class="collapse navbar-collapse text-center" role="navigation" style="padding-left:17rem">
+          <div class="row">
+            <div class="col-sm-12">
+              <form class="navbar-form navbar-left">
+                <div class="input-group input-group-sm" style="max-width:455px;">
+
+                  <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+                </div>
+              </form>
+              <ul class="nav navbar-nav text-center" style="padding-left:8rem">
+                <li>
+
+                  <a href="#"><span style=""><img src="img/dp.jpg" alt="" style="height:25px;width:25px;border-radius:15px"></span><span id="username">Chanda</span> </a>
+                </li>
+                <li>
+                  <a href="#"> Home</a>
+                </li>
+                <li>
+                  <a href="#"> Find Friends</a>
+                </li>
+                <li>
+                  <a href="#" ><i class="glyphicon glyphicon-user" style="color:black"></i> </a>
+                </li>
+                <li>
+                  <a href="#" ><i class="glyphicon glyphicon-envelope" style="color:black"></i> </a>
+                </li>
+                <li>
+                  <a href="#" ><i class="glyphicon glyphicon-question-sign" style="color:black"></i> </a>
+                </li>
+
+              </ul>
+              <ul class="nav navbar-nav ">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-collapse-down" style="color:black"></i></a>
+                  <ul class="dropdown-menu" style="font-size:smaller;text-align:left">
+                    <li><a href="">Create Page</a></li>
+                    <hr>
+                    <li><a href="">Create Group</a></li>
+                    <li><a href="">Manage Groups</a></li>
+                    <li><a href="">Create Ads</a></li>
+                    <li><a href="">Advertisements</a></li>
+                    <hr>
+                    <li><a href="">Activity Logs</a></li>
+                    <li><a href="">Settings</a></li>
+                    <li><a href="" onclick="logout()">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+      <!-- /top nav -->
+
+      <div class="row row-offcanvas row-offcanvas-left">
+        <!-- sidebar -->
+        <div class="column col-sm-3 col-xs-3 sidebar-offcanvas" id="sidebar" style="background-color:#e8eaef!important">
+          <div class="row hidden-xs">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+              <ul class="nav " id="" style="margin-top:5rem">
+                <li><a href="#" class="text-center" style="color:black"><img src="img/dp.jpg" alt="" style="height:25px;width:25px;border-radius:15px">&nbsp;&nbsp;&nbsp;&nbsp; Chanda</a></li>
+                <br>
+                <li style="background-color:#f5f5f6;"><a href="#" class="text-center" style="color:black;"><img src="img/feed.ico" alt="" style="height:25px;width:25px;border-radius:15px;margin-left: 1rem;">&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-weight:bold!important">News Feed</span></a></li>
+                <li><a href="#" class="text-center" style="color:black"><span class="glyphicon glyphicon-eye-open" style="color:gray;font-size:large"></span>&nbsp;&nbsp;&nbsp;&nbsp; Watching</a></li>
+                <ul class="nav watching" style="margin-left:8rem">
+
+                </ul>
+
+              </ul>
+            </div>
+          </div>
+          <!-- <ul class="nav">
+          <li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+        </ul>
+
+        <ul class="nav hidden-xs" id="lg-menu">
+        <li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> Featured</a></li>
+        <li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Stories</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Saved</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
+      </ul>
+      <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+      <li>
+      <a href="http://usebootstrap.com/theme/facebook"><h3>Bootstrap</h3> <i class="glyphicon glyphicon-heart-empty"></i> Bootply</a>
+    </li>
+  </ul>
+
+
+  <ul class="nav visible-xs" id="xs-menu">
+  <li><a href="#featured" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
+  <li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
+  <li><a href="#" class="text-center"><i class="glyphicon glyphicon-paperclip"></i></a></li>
+  <li><a href="#" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a></li>
+</ul> -->
+
+</div>
+<!-- /sidebar -->
+
+<!-- main right col -->
+<div class="column col-sm-9 col-xs-9" id="main">
+
+
+
+  <div class="padding">
+    <div class="">
+
+      <!-- content -->
+      <div class="row">
+
+        <!-- main col left -->
+        <div class="col-sm-8">
+          <div class="well" style="margin-top:5rem">
+            <form class="form-horizontal" role="form">
+              <h4>What's New</h4>
+              <div class="form-group" style="padding:10px;">
+                <textarea class="form-control" placeholder="Update your status"></textarea>
+              </div>
+              <button class="btn btn-primary pull-right" type="button" data-toggle="modal" data-target="#postModal">Post</button><ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker" style="color:#cc5353"></i></a></li></ul>
+            </form>
+          </div>
+
+
+          <div id="allposts">
+
+
+
+            <div id="currPost " class="panel panel-default" style="display:none">
+              <div class="panel-thumbnail">
+                <video class="img-responsive" controls loop>
+                  <source src="vids/22006666.mp4" type="video/mp4" id="play2">
+                  </video>
+                  <div id="logger2"></div>
+                </div>
+                <div class="panel-body">
+                  <p class="lead">Style Loft Demo</p>
+                  <p><span class="glyphicon glyphicon-thumbs-up" style="color:blue" onclick="like()"></span>
+                    <span class="noOfLikes">15</span> people liked this</p>
+
+                    <p>
+                      <img src="img/dp.jpg" height="28px" width="28px" style="border-radius:15px">
+                      <input type="text" class="input" style="padding:1rem;border-radius:5px">
+                      <button class="btn btn-primary">Add</button>
+
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="panel panel-default" >
+                  <div class="panel-thumbnail" id="unitypost">
+                    <img id="play" class="img-responsive">
+                    <div id="logger"></div>
+                  </div>
+                  <div class="panel-body">
+                    <p class="lead">Style Loft</p>
+                    <p><span class="glyphicon glyphicon-thumbs-up" id="likesliveFromUnity" style="color:blue" onclick="like('likesliveFromUnity')">
+                      <span class="noOfLikes" style="color:black">2</span> <span style="color:black">people liked this</span>
+                    </span>
+                    <p>
+                      <img src="img/dp.jpg" height="28px" width="28px" style="border-radius:15px">
+                      <input type="text" class="input" id="commentTextliveFromUnity" style="padding:1rem;border-radius:5px">
+                      <button class="btn btn-primary" onclick="addComment('liveFromUnity')">Add</button>
+                    </p>
+
+                    <div style="margin-left:4rem" id='commentsliveFromUnity'>  </div>
+                  </div>
+                </div>
+
+                <div  class="panel panel-default" style="">
+                  <div class="panel-thumbnail">
+                    <img src="http://localhost:1984/" class="img-responsive"/>
+                  </div>
+                  <div class="panel-body">
+                    <p class="lead">Test Loft</p>
+                    <p><span class="glyphicon glyphicon-thumbs-up" style="color:blue" onclick="like()"></span>
+                      <span class="noOfLikes">15</span> people liked this</p>
+
+                      <p>
+                        <img src="img/dp.jpg" height="28px" width="28px" style="border-radius:15px">
+                        <input type="text" class="input" style="padding:1rem;border-radius:5px">
+                        <button class="btn btn-primary">Add</button>
+
+                      </p>
+                      <div class="comments">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-thumbnail">
+                      <video class="img-responsive" controls  >
+                        <source src="vids/test.mp4" type="video/mp4" >
+                        </video>
+                      </div>
+                      <div class="panel-body">
+                        <p class="lead">Style Loft</p>
+                        <p><span class="glyphicon glyphicon-thumbs-up" style="color:blue" onclick="like()"></span>
+                          <span class="noOfLikes">15</span> people liked this</p>
+
+                          <p>
+                            <img src="img/dp.jpg" height="28px" width="28px" style="border-radius:15px">
+                            <input type="text" class="input" style="padding:1rem;border-radius:5px">
+                            <button class="btn btn-primary">Add</button>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-thumbnail"><img src="img/bg_5.jpg" class="img-responsive"></div>
+                        <div class="panel-body">
+                          <p class="lead">Urbanization</p>
+                          <p><span class="glyphicon glyphicon-thumbs-up" style="color:blue" onclick="like()"></span>
+                            <span class="noOfLikes">15</span> people liked this</p>
+
+                            <p>
+                              <img src="img/uFp_tsTJboUY7kue5XAsGAs28.png" height="28px" width="28px">
+                            </p>
+                          </div>
+                        </div>
+
+
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootstrap Examples</h4></div>
+                          <div class="panel-body">
+                            <div class="list-group">
+                              <a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Modal / Dialog</a>
+                              <a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Datetime Examples</a>
+                              <a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Data Grids</a>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>More Templates</h4></div>
+                          <div class="panel-body">
+                            <img src="img/150x150.gif" class="img-circle pull-right"> <a href="#">Free @Bootply</a>
+                            <div class="clearfix"></div>
+                            There a load of new free Bootstrap 3
+                            ready templates at Bootply. All of these templates are free and don't
+                            require extensive customization to the Bootstrap baseline.
+                            <hr>
+                            <ul class="list-unstyled"><li><a href="http://usebootstrap.com/theme/facebook">Dashboard</a></li><li><a href="http://usebootstrap.com/theme/facebook">Darkside</a></li><li><a href="http://usebootstrap.com/theme/facebook">Greenfield</a></li></ul>
+                          </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading"><h4>What Is Bootstrap?</h4></div>
+                          <div class="panel-body">
+                            Bootstrap is front end frameworkto
+                            build custom web applications that are fast, responsive &amp; intuitive.
+                            It consist of CSS and HTML for typography, forms, buttons, tables,
+                            grids, and navigation along with custom-built jQuery plug-ins and
+                            support for responsive layouts. With dozens of reusable components for
+                            navigation, pagination, labels, alerts etc..                          </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading"> <h4>Bootply Editor &amp; Code Library</h4></div>
+                            <div class="panel-body">
+                              <p><img src="img/150x150.gif" class="img-circle pull-right"> <a href="#">The Bootstrap Playground</a></p>
+                              <div class="clearfix"></div>
+                              <hr>
+                              Design, build, test, and prototype
+                              using Bootstrap in real-time from your Web browser. Bootply combines the
+                              power of hand-coded HTML, CSS and JavaScript with the benefits of
+                              responsive design using Bootstrap. Find and showcase Bootstrap-ready
+                              snippets in the 100% free Bootply.com code repository.
+                            </div>
+                          </div>
+                          <div class="well">
+                            <form class="form">
+                              <h4>Sign-up</h4>
+                              <div class="input-group text-center">
+                                <input class="form-control input-lg" placeholder="Enter your email address" type="text">
+                                <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">OK</button></span>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Stackoverflow</h4></div>
+                            <div class="panel-body">
+                              <img src="img/150x150.gif" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>
+                              <div class="clearfix"></div>
+                              <hr>
+
+                              <p>If you're looking for help with Bootstrap code, the <code>twitter-bootstrap</code> tag at <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap">Stackoverflow</a> is a good place to find answers.</p>
+
+                              <hr>
+                              <form>
+                                <div class="input-group">
+                                  <div class="input-group-btn">
+                                    <button class="btn btn-default">+1</button><button class="btn btn-default"><i class="glyphicon glyphicon-share"></i></button>
+                                  </div>
+                                  <input class="form-control" placeholder="Add a comment.." type="text">
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Portlet Heading</h4></div>
+                            <div class="panel-body">
+                              <ul class="list-group">
+                                <li class="list-group-item">Modals</li>
+                                <li class="list-group-item">Sliders / Carousel</li>
+                                <li class="list-group-item">Thumbnails</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-thumbnail"><img src="img/bg_4.jpg" class="img-responsive"></div>
+                            <div class="panel-body">
+                              <p class="lead">Social Good</p>
+                              <p><span class="glyphicon glyphicon-thumbs-up" style="color:blue" onclick="like()"></span>
+                                <span class="noOfLikes">15</span> people liked this</p>
+
+                                <p>
+                                  <img src="img/photo.jpg" height="28px" width="28px">
+                                  <img src="img/photo.png" height="28px" width="28px">
+                                  <img src="img/photo_002.jpg" height="28px" width="28px">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <!-- main col right -->
+                        <div class="col-sm-3">
+                          <div class="rightSide" style="height:40rem;text-align:left;font-weight:bolder;color:gray;background: white;padding:1rem 3rem 1rem 3rem;margin-top:5rem">
+                            <h6>People you may know</h6>
+                            <ul class="nav navbar-nav text-center" style="">
+                              <li>
+                                <a href="#"><span style=""><img src="img/dp.jpg" alt="" style="height:25px;width:25px;border-radius:15px"></span> Chanda</a>
+                              </li>
+                              <li>
+                                <a href="#"><span style=""><img src="img/dp.jpg" alt="" style="height:25px;width:25px;border-radius:15px"></span> user8</a>
+                              </li>
+                              <li>
+                                <a href="#"><span style=""><img src="img/dp.jpg" alt="" style="height:25px;width:25px;border-radius:15px"></span> user8</a>
+                              </li>
+                              <li>
+                                <a href="#"><span style=""><img src="img/dp.jpg" alt="" style="height:25px;width:25px;border-radius:15px"></span> user8</a>
+                              </li>
+                              <li>
+                                <a href="#"><span style=""><img src="img/dp.jpg" alt="" style="height:25px;width:25px;border-radius:15px"></span> user8</a>
+                              </li>
+                            </ul>
+
+                          </div>
+
+
+                        </div>
+                      </div><!--/row-->
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <a href="#">Twitter</a> <small class="text-muted">|</small> <a href="#">Facebook</a> <small class="text-muted">|</small> <a href="#">Google+</a>
+                        </div>
+                      </div>
+
+                      <div class="row" id="footer">
+                        <div class="col-sm-6">
+
+                        </div>
+                        <div class="col-sm-6">
+                          <p>
+                            <a href="#" class="pull-right">�Copyright 2013</a>
+                          </p>
+                        </div>
+                      </div>
+
+                      <hr>
+
+                      <h4 class="text-center">
+                        <a href="http://usebootstrap.com/theme/facebook" target="ext">Download this Template @Bootply</a>
+                      </h4>
+
+                      <hr>
+
+
+                    </div><!-- /col-9 -->
+                  </div><!-- /padding -->
+                </div>
+                <!-- /main -->
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!--post modal-->
+          <div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+                  Update Status
+                </div>
+                <div class="modal-body">
+                  <form class="form center-block">
+                    <div class="form-group">
+                      <textarea class="form-control input-lg" autofocus="" placeholder="What do you want to share?" id="contentForPost"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <div>
+                    <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true" onclick="postToFb()">Post</button>
+                    <ul class="pull-left list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script type="text/javascript" src="js/jquery.js"></script>
+          <script type="text/javascript" src="js/bootstrap.js"></script>
+
+          <script src="js/socket.io-1.4.5.js"></script>
+          <script src="js/script.js"></script>
+          <script type="text/javascript">
+
+          </script>
+        </body></html>
